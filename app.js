@@ -111,14 +111,11 @@ class UI{
             }
            
             button.addEventListener('click', (event)=>{
-               if(event.target.classList.contains('bag-btn')){
+               if(event.target.classList.contains('bag-btn') || event.target.classList.contains('fa-shopping-cart') ){
 
                 event.target.innerText='InCart';
+                button.disabled= true;           
 
-                event.target.disabled =true;
-
-             
-              
 
               //get products from products
 
@@ -141,6 +138,7 @@ class UI{
 
              
                }
+          
 
         //        else if(event.target.classList.contains('fa-plus')){
         //         let addAmount= event.target;
